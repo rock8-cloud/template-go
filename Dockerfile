@@ -10,7 +10,7 @@ COPY . .
 RUN swag init && CGO_ENABLED=0 go build -o server .
 
 # Run stage
-FROM alpine:3.21
+FROM alpine:3.24
 WORKDIR /app
 COPY --from=build /app/server .
 EXPOSE 8080
