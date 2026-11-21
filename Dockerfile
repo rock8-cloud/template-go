@@ -1,5 +1,5 @@
 # Build stage
-FROM golang:1.23-alpine AS build
+FROM golang:1.27-alpine AS build
 WORKDIR /app
 # swag generates swagger docs from annotations
 RUN go install github.com/swaggo/swag/cmd/swag@latest
